@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+}
+
+
+/* CARD */
+.card {
+    width: 55em;
+    height: 22em;
+    margin-left: 25em;
+    margin-top: 15em;
+    border-radius: 10px;
+    border: none;
+}
+
+.card-image {
+    height: 100%;
+}
+
+.card-title {
+    color: hsl(214, 17%, 51%);
+    font-size: 1.75em;
+    font-weight: 700;
+    padding: 1em  1em 0.5em;
+}
+
+.card-text {
+    padding: 0 1.75em;
+}
+
+.card-text,
+.date-text {
+    color: hsl(212, 23%, 69%);
+    font-size: inherit;
+}
+
+.text-muted {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em;
+    margin-top: -3em;
+}
+
+.avatar-img {
+    border-radius: 100%;
+    width: 3em;
+}
+
+.name-text {
+    color: hsl(214, 17%, 51%);
+    font-weight: 700;
+}
+
+button {
+    border: none;
+    background-color: hsl(210, 46%, 95%) ;
+    border-radius: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 49em;
+    bottom: 2em;
+}
+
+button:hover {
+    background-color: hsl(217, 19%, 35%);
+   
+}
+
+.tooltip-text {
+    color: hsl(212, 23%, 69%);
+    font-size: 10px;
+    font-weight: 200;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+
+.fa-brands {
+    font-size: 1.5em;
+    padding: 0 4px;
+}
+
+
+/* POPPER */
+#tooltip {
+    background: hsl(217, 19%, 35%);
+    color: white;
+    padding: 1em 2em;
+    border-radius: 10px;
+}
+
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+#arrow {
+  visibility: hidden;
+}
+
+#arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+#tooltip[data-popper-placement^='top'] > #arrow {
+    bottom: -4px;
+}
+  
+#tooltip[data-popper-placement^='bottom'] > #arrow {
+    top: -4px;
+}
+  
+#tooltip[data-popper-placement^='left'] > #arrow {
+    right: -4px;
+}
+  
+#tooltip[data-popper-placement^='right'] > #arrow {
+    left: -4px;
+}
+
+#tooltip {
+    display: none;
+}
+  
+ #tooltip[data-show] {
+    display: block;
+}
+
+
+/* FOOTER */
+footer {
+    color: hsl(217, 19%, 35%);
+    padding-top: 2em;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(217, 19%, 35%);
+    text-decoration: none;
+}
+
+
+/* MEDIA QUERY */
+@media ( max-width: 600px) {
+  .card {
+      display: flex;
+      flex-direction: column;
+      height: 50em;
+      width: 28em;
+      margin: 5em;
+  }
+
+  .card-image {
+    height: 100%;
+    border-top-right-radius: 5px;
+   }
+
+   button {
+    position: absolute;
+    left: 23em;
+    bottom: 4em;
+   }
+
+   
+}
+
